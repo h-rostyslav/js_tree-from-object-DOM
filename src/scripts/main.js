@@ -25,9 +25,13 @@ function createTree(element, data) {
     return;
   }
 
-  const ul = document.createElement('ul');
+  let ul;
 
   for (const key in data) {
+
+    if(!ul) {
+      ul = document.createElement('ul');
+    }
     const li = document.createElement('li');
 
     li.textContent = key;
@@ -39,7 +43,7 @@ function createTree(element, data) {
     ul.append(li);
   }
 
-  if(element) {
+  if (element) {
     element.append(ul);
   }
 }
