@@ -28,10 +28,10 @@ function createTree(element, data) {
   let ul;
 
   for (const key in data) {
-
-    if(!ul) {
+    if (!ul) {
       ul = document.createElement('ul');
     }
+
     const li = document.createElement('li');
 
     li.textContent = key;
